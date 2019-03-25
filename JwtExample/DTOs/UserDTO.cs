@@ -12,23 +12,11 @@ namespace JwtExample.DTOs
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Username { get; set; }
+        public IEnumerable<string> Roles { get; set; }
         public string Token { get; set; }
 
-        public UserDTO(ApplicationUser user)
+        public UserDTO()
         {
-            Id = user.Id;
-            FirstName = user.FirstName;
-            LastName = user.LastName;
-            Username = user.UserName;
-        }
-
-        public UserDTO(ApplicationUser user, string token)
-        {
-            Id = user.Id;
-            FirstName = user.FirstName;
-            LastName = user.LastName;
-            Username = user.UserName;
-            Token = token;
         }
     }
 }

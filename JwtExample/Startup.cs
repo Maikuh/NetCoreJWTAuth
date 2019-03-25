@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using JwtExample.Data;
 using JwtExample.Helpers;
 using JwtExample.Services;
@@ -65,6 +66,8 @@ namespace JwtExample
                     ValidateAudience = false
                 };
             });
+
+            services.AddAutoMapper();
 
             // Configure DI for application services
             services.AddScoped<IUserService, UserService>();
