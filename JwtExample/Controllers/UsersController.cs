@@ -55,7 +55,7 @@ namespace JwtExample.Controllers
             }
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("{id}"), Authorize]
         public async Task<ActionResult> Update([FromBody] RegisterDTO dto, string id)
         {
             var result = await _userService.Update(dto, id);
